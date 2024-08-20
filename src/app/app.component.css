@@ -1,0 +1,51 @@
+/* Estilos para el navbar en pantallas grandes */
+.navbar {
+    z-index: 1030; /* Asegura que el navbar esté por encima de otros contenidos */
+  }
+  
+  .navbar-nav {
+    justify-content: center;
+  }
+  
+  @media (max-width: 991.98px) {
+    /* Oculta el navbar de arriba cuando el offcanvas está visible */
+    .navbar-expand-lg .navbar-collapse {
+      display: none;
+    }
+  
+    /* Estilos para el offcanvas */
+    .offcanvas {
+      width: 250px; /* Ajusta el ancho del offcanvas */
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .offcanvas.offcanvas-start {
+      transform: translateX(-100%);
+    }
+  
+    .offcanvas.show {
+      transform: translateX(0);
+    }
+  
+    /* Asegura que el offcanvas esté a la izquierda */
+    .offcanvas-start {
+      left: 0;
+    }
+  }
+  
+  /* Transición suave para el offcanvas */
+  .offcanvas {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .offcanvas.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Estilos para eliminar la cruz del offcanvas */
+  .offcanvas .btn-close {
+    display: none;
+  }
+  

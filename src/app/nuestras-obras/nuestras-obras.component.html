@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="text-center">Nuestras Obras</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-4" *ngFor="let obra of obras">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ obra.titulo }}</h5>
+            <p class="card-text">{{ obra.descripcion }}</p>
+            <ul class="list-unstyled">
+              <li><strong>Nivel:</strong> {{ obra.nivel }}</li>
+              <li><strong>Formato:</strong> {{ obra.formato }}</li>
+              <li><strong>Duración:</strong> {{ obra.duracion }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
