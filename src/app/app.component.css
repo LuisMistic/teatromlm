@@ -1,36 +1,42 @@
 /* Estilos para el navbar en pantallas grandes */
 .navbar {
     z-index: 1030; /* Asegura que el navbar esté por encima de otros contenidos */
+    background-color: #37b4a0; /* Color de fondo del navbar en pantallas grandes */
   }
   
   .navbar-nav {
     justify-content: center;
   }
   
-  @media (max-width: 991.98px) {
-    /* Oculta el navbar de arriba cuando el offcanvas está visible */
-    .navbar-expand-lg .navbar-collapse {
-      display: none;
-    }
+  .navbar-nav .nav-link {
+    color: #3aac99; /* Color del texto de los enlaces del navbar */
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  }
   
-    /* Estilos para el offcanvas */
-    .offcanvas {
-      width: 250px; /* Ajusta el ancho del offcanvas */
-      transition: transform 0.3s ease-in-out;
-    }
+  .navbar-nav .nav-link:hover {
+    background-color: #fff; /* Color de fondo del enlace al pasar el ratón */
+    color: #37b4a0; /* Color del texto al pasar el ratón */
+  }
   
-    .offcanvas.offcanvas-start {
-      transform: translateX(-100%);
-    }
+  /* Estilos para el offcanvas */
+  .offcanvas {
+    width: 250px; /* Ajusta el ancho del offcanvas */
+    background-color: #37b4a0; /* Color de fondo del offcanvas */
+    transition: transform 0.3s ease-in-out;
+    position: fixed; /* Posiciona el offcanvas de forma fija */
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
   
-    .offcanvas.show {
-      transform: translateX(0);
-    }
+  .offcanvas.offcanvas-start {
+    transform: translateX(-100%);
+  }
   
-    /* Asegura que el offcanvas esté a la izquierda */
-    .offcanvas-start {
-      left: 0;
-    }
+  .offcanvas.show {
+    transform: translateX(0);
   }
   
   /* Transición suave para el offcanvas */
@@ -47,5 +53,18 @@
   /* Estilos para eliminar la cruz del offcanvas */
   .offcanvas .btn-close {
     display: none;
+  }
+  
+  /* Estilo para los enlaces dentro del offcanvas */
+  .offcanvas .nav-link {
+    color: #fff; /* Color del texto de los enlaces dentro del offcanvas */
+    padding: 10px 15px; /* Espaciado interno de los enlaces dentro del offcanvas */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  }
+  
+  .offcanvas .nav-link:hover {
+    background-color: #fff; /* Color de fondo del enlace al pasar el ratón en el offcanvas */
+    color: #37b4a0; /* Color del texto al pasar el ratón en el offcanvas */
   }
   
